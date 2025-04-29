@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+#root {
+    background-color: rgb(35, 36, 46);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.text-basic {
+    @apply text-gray-900 font-[Poppins] text-sm;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #print-area,
+    #print-area * {
+        visibility: visible;
+    }
+
+    #print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+}
